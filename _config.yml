@@ -1,0 +1,7 @@
+title: Security Blog
+description: Short reads on cloud security and threat detection
+header_pages:
+  - about.md
+theme: minima
+plugins:
+  - jekyll-feed
