@@ -98,8 +98,8 @@ a:hover {
   border: 1px solid var(--line);
   border-left: 5px solid #1c1c1c;
   border-radius: 12px;
-  max-width: 520px;
-  padding: 0.62rem 0.7rem;
+  max-width: 100%;
+  padding: 1.35rem 1.5rem;
   box-shadow: 0 26px 50px -36px var(--shadow-hard);
   animation: reveal 650ms ease-out both;
   overflow: hidden;
@@ -118,23 +118,23 @@ a:hover {
 
 .home-hero h1 {
   margin: 0 0 0.45rem;
-  font-size: clamp(0.78rem, 0.9vw, 0.95rem);
+  font-size: clamp(1.7rem, 3.2vw, 3rem);
   color: #111111;
-  max-width: 16ch;
+  max-width: 30ch;
 }
 
 .home-hero p {
   margin: 0;
-  font-size: 0.76rem;
+  font-size: 1.15rem;
   color: var(--muted);
-  max-width: 38ch;
+  max-width: 72ch;
 }
 
 .signal-row {
-  margin: 0.45rem 0 0;
+  margin: 1rem 0 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.6rem;
 }
 
 .signal-chip {
@@ -142,8 +142,8 @@ a:hover {
   color: #1d1d1d;
   background: rgba(250, 250, 250, 0.96);
   border-radius: 999px;
-  padding: 0.18rem 0.44rem;
-  font-size: 0.64rem;
+  padding: 0.34rem 0.72rem;
+  font-size: 0.92rem;
   transition: background-color 160ms ease, border-color 160ms ease;
 }
 
@@ -153,7 +153,7 @@ a:hover {
 }
 
 .section-title {
-  margin-top: 0.9rem;
+  margin-top: 2rem;
   margin-bottom: 0.9rem;
   color: #111111;
   display: flex;
