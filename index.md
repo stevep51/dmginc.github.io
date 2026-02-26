@@ -5,13 +5,19 @@ nav_exclude: true
 ---
 
 <section class="home-hero">
-  <h1>{{ site.data.site_text.home.title }}</h1>
-  <p>{{ site.data.site_text.home.intro }}</p>
-  <div class="signal-row">
-    {% for chip in site.data.site_text.home.chips %}
-    <span class="signal-chip">{{ chip }}</span>
-    {% endfor %}
+  <div class="hero-copy">
+    <h1>{{ site.data.site_text.home.title }}</h1>
+    <p>{{ site.data.site_text.home.intro }}</p>
+    <div class="signal-row">
+      {% for chip in site.data.site_text.home.chips %}
+      <span class="signal-chip">{{ chip }}</span>
+      {% endfor %}
+    </div>
   </div>
+
+  <aside class="hero-visual" aria-hidden="true">
+    <img src="{{ '/assets/img/hero-pattern.svg' | relative_url }}" alt="" />
+  </aside>
 </section>
 
 <h2 class="section-title">{{ site.data.site_text.home.latest_posts_heading }}</h2>
@@ -27,10 +33,13 @@ nav_exclude: true
 {% endfor %}
 {% else %}
   <div class="post-empty">
-    <div class="empty-line"></div>
-    <div class="empty-line short"></div>
-    <div class="empty-dots">
-      <span></span><span></span><span></span>
+    <div class="empty-tile">
+      <img src="{{ '/assets/img/topic-cloud.svg' | relative_url }}" alt="Cloud security visual" />
+      <p>Cloud Architecture Notes</p>
+    </div>
+    <div class="empty-tile">
+      <img src="{{ '/assets/img/topic-detect.svg' | relative_url }}" alt="Detection engineering visual" />
+      <p>Detection Engineering Notes</p>
     </div>
   </div>
 {% endif %}
