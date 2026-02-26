@@ -98,8 +98,8 @@ a:hover {
   border: 1px solid var(--line);
   border-left: 5px solid #1c1c1c;
   border-radius: 12px;
-  max-width: 900px;
-  padding: 1.3rem 1.35rem;
+  max-width: 760px;
+  padding: 1rem 1.1rem;
   box-shadow: 0 26px 50px -36px var(--shadow-hard);
   animation: reveal 650ms ease-out both;
   overflow: hidden;
@@ -118,20 +118,20 @@ a:hover {
 
 .home-hero h1 {
   margin: 0 0 0.45rem;
-  font-size: clamp(1.22rem, 2vw, 1.8rem);
+  font-size: clamp(1rem, 1.45vw, 1.35rem);
   color: #111111;
-  max-width: 26ch;
+  max-width: 20ch;
 }
 
 .home-hero p {
   margin: 0;
-  font-size: 0.96rem;
+  font-size: 0.9rem;
   color: var(--muted);
-  max-width: 68ch;
+  max-width: 56ch;
 }
 
 .signal-row {
-  margin: 0.95rem 0 0;
+  margin: 0.7rem 0 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem;
@@ -153,7 +153,7 @@ a:hover {
 }
 
 .section-title {
-  margin-top: 2.4rem;
+  margin-top: 1.8rem;
   margin-bottom: 0.9rem;
   color: #111111;
   display: flex;
@@ -247,7 +247,7 @@ a:hover {
 
 @media (min-width: 900px) {
   .home-hero {
-    margin-left: 20px;
+    margin-left: 0;
   }
 
   .post-grid {
