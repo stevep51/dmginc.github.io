@@ -4,13 +4,12 @@ title: About
 permalink: /about/
 ---
 
-This site is a blog about security engineering and threat detection.
+{{ site.data.site_text.about.intro }}
 
-Expect a mix of:
+{{ site.data.site_text.about.heading }}
 
-- Detection engineering patterns that hold up in production
-- Cloud security architecture and operational hardening
-- Threat detection writeups and response lessons
-- Practical checklists and implementation notes
+{% for item in site.data.site_text.about.bullets %}
+- {{ item }}
+{% endfor %}
 
-The goal is simple: practical insights you can apply quickly.
+{{ site.data.site_text.about.outro }}

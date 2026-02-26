@@ -5,15 +5,16 @@ nav_exclude: true
 ---
 
 <section class="home-hero">
-  <h1>Security Engineering, Cloud Security and Detection Engineering</h1>
-  <p>Writeups, lessons learned, and practical guidance focused on building reliable defenses and improving detection coverage.</p>
+  <h1>{{ site.data.site_text.home.title }}</h1>
+  <p>{{ site.data.site_text.home.intro }}</p>
   <div class="signal-row">
-    <span class="signal-chip">Cloud Security</span>
-    <span class="signal-chip">Detection Engineering</span>
+    {% for chip in site.data.site_text.home.chips %}
+    <span class="signal-chip">{{ chip }}</span>
+    {% endfor %}
   </div>
 </section>
 
-<h2 class="section-title">Latest Posts</h2>
+<h2 class="section-title">{{ site.data.site_text.home.latest_posts_heading }}</h2>
 
 <div class="post-grid">
 {% for post in site.posts limit: 6 %}

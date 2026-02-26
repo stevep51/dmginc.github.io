@@ -1,0 +1,17 @@
+home:
+  title: "Security Engineering, Cloud Security and Detection Engineering"
+  intro: "Writeups, lessons learned, and practical guidance focused on building reliable defenses and improving detection coverage."
+  chips:
+    - "Cloud Security"
+    - "Detection Engineering"
+  latest_posts_heading: "Latest Posts"
+
+about:
+  intro: "This site is a blog about security engineering and threat detection."
+  heading: "Expect a mix of:"
+  bullets:
+    - "Detection engineering patterns that hold up in production"
+    - "Cloud security architecture and operational hardening"
+    - "Threat detection writeups and response lessons"
+    - "Practical checklists and implementation notes"
+  outro: "The goal is simple: practical insights you can apply quickly."
