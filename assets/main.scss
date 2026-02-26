@@ -77,9 +77,6 @@ a:hover {
 }
 
 .home-hero {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 1rem;
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.99), rgba(244, 244, 244, 0.98));
   border: 1px solid var(--line);
   border-left: 6px solid #171717;
@@ -117,21 +114,6 @@ a:hover {
   padding: 0.24rem 0.54rem;
   font-size: 0.76rem;
   font-weight: 500;
-}
-
-.hero-visual {
-  border: 1px solid #d0d0d0;
-  border-radius: 10px;
-  overflow: hidden;
-  background: #f3f3f3;
-  min-height: 220px;
-}
-
-.hero-visual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 .section-title {
@@ -194,35 +176,58 @@ a:hover {
   color: #333;
 }
 
+
+
 .post-empty {
   grid-column: span 12;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.85rem;
-}
-
-.empty-tile {
+  min-height: 150px;
   border: 1px solid var(--line);
   border-top: 3px solid #1b1b1b;
   border-radius: 12px;
-  background: linear-gradient(180deg, #fafafa 0%, #f1f1f1 100%);
+  background: linear-gradient(180deg, #fafafa 0%, #f2f2f2 100%);
   box-shadow: 0 16px 30px -28px var(--shadow);
+  padding: 0.8rem;
+  position: relative;
   overflow: hidden;
 }
 
-.empty-tile img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  display: block;
+.post-empty::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.018) 0, rgba(0, 0, 0, 0.018) 8px, transparent 8px, transparent 18px);
 }
 
-.empty-tile p {
-  margin: 0;
-  padding: 0.62rem 0.68rem 0.72rem;
-  font-size: 0.86rem;
-  color: #202020;
-  font-weight: 500;
+.empty-line {
+  width: min(420px, 86%);
+  height: 10px;
+  border-radius: 999px;
+  background: #d2d2d2;
+  position: relative;
+  z-index: 1;
+}
+
+.empty-line.short {
+  margin-top: 8px;
+  width: min(290px, 62%);
+  background: #dedede;
+}
+
+.empty-dots {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  z-index: 1;
+  display: flex;
+  gap: 8px;
+}
+
+.empty-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #9a9a9a;
+  opacity: 0.8;
 }
 
 @media (min-width: 920px) {
@@ -236,20 +241,9 @@ a:hover {
 }
 
 @media (max-width: 900px) {
-  .home-hero {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-visual {
-    min-height: 170px;
-  }
-
   .hero-copy h1,
   .hero-copy p {
     max-width: none;
   }
 
-  .post-empty {
-    grid-template-columns: 1fr;
-  }
 }
