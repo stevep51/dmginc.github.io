@@ -284,3 +284,55 @@ a:hover {
     transform: translateY(0);
   }
 }
+
+.post-empty {
+  grid-column: span 12;
+  min-height: 220px;
+  border: 1px solid var(--line);
+  border-top: 3px solid #1b1b1b;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fafafa 0%, #f2f2f2 100%);
+  box-shadow: 0 16px 36px -30px var(--shadow-hard);
+  padding: 1.15rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.post-empty::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.02) 0, rgba(0, 0, 0, 0.02) 8px, transparent 8px, transparent 18px);
+}
+
+.empty-line {
+  width: min(420px, 86%);
+  height: 11px;
+  border-radius: 999px;
+  background: #d6d6d6;
+  position: relative;
+  z-index: 1;
+}
+
+.empty-line.short {
+  margin-top: 10px;
+  width: min(290px, 62%);
+  background: #e0e0e0;
+}
+
+.empty-dots {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  z-index: 1;
+  display: flex;
+  gap: 8px;
+}
+
+.empty-dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #8f8f8f;
+  opacity: 0.65;
+}

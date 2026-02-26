@@ -17,6 +17,7 @@ nav_exclude: true
 <h2 class="section-title">{{ site.data.site_text.home.latest_posts_heading }}</h2>
 
 <div class="post-grid">
+{% if site.posts and site.posts.size > 0 %}
 {% for post in site.posts limit: 6 %}
   <a class="post-card" href="{{ post.url | relative_url }}">
     <p class="meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.categories and post.categories.size > 0 %} · {{ post.categories | first | replace: '-', ' ' | capitalize }}{% endif %}</p>
@@ -24,4 +25,13 @@ nav_exclude: true
     <p class="excerpt">{{ post.excerpt | strip_html | truncate: 125 }}</p>
   </a>
 {% endfor %}
+{% else %}
+  <div class="post-empty">
+    <div class="empty-line"></div>
+    <div class="empty-line short"></div>
+    <div class="empty-dots">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+{% endif %}
 </div>
