@@ -8,9 +8,9 @@
   --bg-1: #f8f8f8;
   --panel: #ffffff;
   --panel-soft: #f4f4f4;
-  --text: #141414;
-  --muted: #5c5c5c;
-  --line: #d2d2d2;
+  --text: #0f0f0f;
+  --muted: #4d4d4d;
+  --line: #bcbcbc;
   --shadow: rgba(0, 0, 0, 0.1);
 }
 
@@ -81,6 +81,7 @@ a:hover {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 1rem;
+  align-items: start;
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.99), rgba(244, 244, 244, 0.98));
   border: 1px solid var(--line);
   border-left: 6px solid #171717;
@@ -99,6 +100,21 @@ a:hover {
   height: 230px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+
+.home-hero::before {
+  content: "";
+  position: absolute;
+  right: 1.2rem;
+  top: 1.1rem;
+  width: 130px;
+  height: 62%;
+  border-left: 2px solid rgba(0, 0, 0, 0.16);
+  border-top: 1px solid rgba(0, 0, 0, 0.11);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 .home-hero h1 {
@@ -165,7 +181,7 @@ a:hover {
   border-top: 3px solid #181818;
   background: linear-gradient(180deg, var(--panel) 0%, var(--panel-soft) 100%);
   border-radius: 12px;
-  padding: 1rem;
+  padding: 0.68rem;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
   box-shadow: 0 16px 34px -30px var(--shadow);
 }
@@ -195,13 +211,13 @@ a:hover {
 
 .post-empty {
   grid-column: span 12;
-  min-height: 180px;
+  min-height: 116px;
   border: 1px solid var(--line);
   border-top: 3px solid #1b1b1b;
   border-radius: 12px;
   background: linear-gradient(180deg, #fafafa 0%, #f2f2f2 100%);
   box-shadow: 0 16px 34px -30px var(--shadow);
-  padding: 1rem;
+  padding: 0.68rem;
   position: relative;
   overflow: hidden;
 }
@@ -214,8 +230,8 @@ a:hover {
 }
 
 .empty-line {
-  width: min(520px, 86%);
-  height: 12px;
+  width: min(360px, 78%);
+  height: 9px;
   border-radius: 999px;
   background: #d2d2d2;
   position: relative;
@@ -223,8 +239,8 @@ a:hover {
 }
 
 .empty-line.short {
-  margin-top: 10px;
-  width: min(360px, 64%);
+  margin-top: 8px;
+  width: min(240px, 52%);
   background: #dedede;
 }
 
@@ -238,8 +254,8 @@ a:hover {
 }
 
 .empty-dots span {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: #9a9a9a;
   opacity: 0.8;
@@ -258,6 +274,10 @@ a:hover {
 @media (max-width: 900px) {
   .home-hero {
     grid-template-columns: 1fr;
+  }
+
+  .home-hero::before {
+    display: none;
   }
 
   .home-hero h1 {
