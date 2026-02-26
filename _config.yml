@@ -2,8 +2,6 @@ title: Security Blog
 description: Short reads on cloud security and threat detection
 url: https://stevep51.github.io
 baseurl: /blog
-header_pages:
-  - about.md
 theme: minima
 plugins:
   - jekyll-feed
