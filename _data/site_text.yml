@@ -1,7 +1,8 @@
 home:
   title: "Security, Cloud, and Detection Engineering"
-  intro: "Writeups, lessons learned, and practical guidance focused on building reliable defenses and improving detection coverage."
+  intro: "Writeups, lessons learned, and practical talking points focused on building reliable defenses and improving detection coverage."
   chips:
+    - "Security Engineering"
     - "Cloud Security"
     - "Detection Engineering"
   latest_posts_heading: "Latest Posts"
